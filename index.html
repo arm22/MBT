@@ -4,11 +4,11 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>React.js</title>
+		<title>Redis</title>
 
-		<link rel="shortcut icon" href="css/react.png">
+		<link rel="shortcut icon" href="css/redis.png">
 
-		<meta name="description" content="A framework for easily creating beautiful UI using JSX">
+		<meta name="description" content="A memory caching system">
 		<meta name="author" content="Austin Meyers">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -43,249 +43,45 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>React.js (pt. 1)</h1>
-					<h3>"A Javascript library for building user interfaces"</h3>
+					<h1>Redis</h1>
+					<h3>"Advanced key-value cache and store"</h3>
+					<h3>A.K.A. Data structure server </h3>
 					<p>
-						<small>Presentation by Austin Meyers, Kisoon Kim, Robin Liu</small>
+						<small>Presentation by Austin Meyers, Manvir Singh</small>
 					</p>
 				</section>
 				
 				<section>
-					<h1 class="fragment fade-in">What?</h1>
-					<h1 class="fragment fade-in">Why?</h1>
-					<h1 class="fragment fade-in">How?</h1>
+					<img class="fragment fade-in" src="css/redis.png">
+					<h1 class="fragment fade-in">vs.</h1>
+					<img class="fragment fade-in" src="css/memcached.png">
 				</section>
 				
 				<section>
-					<h1>{what}</h1>
-				</section>
-
-				<section>
-					<section>
-						<h3>What is React.js?</h3>
-						<ul>
-							<li>Javascript Library</li>
-							<li>'View' in Model-View-Controller</li>
-							<li>Built by Facebook & Instagram</li>
-							<li>Open Source</li>
-							<li>Reactive data flow</li>
-							<li>Virtual DOM</li>
-							<li>Uses JSX (Javascript XML)<text class="fragment fade-in"> wait what?</text></li>
-						</ul>
-					</section>
-					<section>
-						<h3>What is JSX?</h3>
-						<ul>
-							<li>'Javascript XML'</li>
-							<li>Not required for React.js</li>
-							<li>People use React BECAUSE of JSX</li>
-							<li>JSX is compiled into Javascript for the browser to understand</li>
-						</ul>
-						<p>
-						React with regular Javascript
-						<pre><code data-trim>
-							React.createElement('a', {href: 'https://facebook.github.io/react/'}, 'Hello!')
-						</code></pre>
-						</p>
-						<p>
-						React with JSX
-						<pre><code data-trim>
-							<a href="https://facebook.github.io/react/">Hello!</a>
-						</code></pre>
-						</p>
-					</section>
-
-				</section>
-
-				<section>
-					<h1>{why}</h1>
-				</section>
-
-				<section>
-					<h3>Why React.js?</h3>
-					<ul>
-						<li>Simple</li>
-						<li>Declarative</li>
-						<li>Composable 'Components'</li>
-						<li>One-way data flow</li>
-					</ul>
-					<p>
-						<q>We built React to solve one problem: building large applications with data that changes over time.</q>
-					</p>
-				</section>
-
-				<section>
-					<h1>{how}</h1>
-				</section>
-
-				<section>
-					<h3>3 Step Process</h3>
+					<h1>Performance:</h1>
 					<ol>
-						<li class="fragment fragment-fade">Create variable</li>
-						<li class="fragment fragment-fade">Return HTML (or other response)</li>
-						<li class="fragment fragment-fade">Render results</li>
+						<li class="fragment fade-in">More data types supported</li>
+						<li class="fragment fade-in">Detailed Data Eviction</li>
+						<li class="fragment fade-in">Direct server manipulation</li>
+						<li class="fragment fade-in">Data Persistance</li>
+						<li class="fragment fade-in">Replication</li>
 					</ol>
 				</section>
-					
-				<section>
-					<section>
-					<h3>Lets see how to do it</h3>
-<pre><code>&lt;!--DOCTYPE HTML--&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;React Hello World&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;!--
-    You include React,
-    then the JSXTransformer which turns JSX into JavaScript 
-    and then your React code.
-    
-    In production, you'll want to not use the JSXTransformer
-    and should instead look at using something like Gulp, Grunt or
-    WebPack to compile JSX into JavaScript. Also, check out:
-    http://facebook.github.io/react/docs/tooling-integration.html
-    --&gt;
-    &lt;script src=&quot;http://fb.me/react-0.12.2.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;http://fb.me/JSXTransformer-0.12.2.js&quot;&gt;&lt;/script&gt;
-    
-    &lt;!--
-    This is where you link to your React code. Can be .js or .jsx 
-    extension, doesn't really matter.
-    --&gt;
-    &lt;script src=&quot;scripts.jsx&quot; type=&quot;text/jsx&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre></code>
-</section>
-<section>
-<h3>Lets see how to do it</h3>
-<pre><code>/*
-The simplist React component ever.
-
-It just renders an H1 tag into the body of the page. Since
-JSX is basically just HTML, you can use any valid tag you want.
-*/
- 
-React.render(&lt;h1&gt;Hello World&lt;/h1&gt;, document.body);</code></pre>
-</section>
-	</section>
 
 				<section>
-					<a class="jsbin-embed" href="http://jsbin.com/tikivobiwa/1/embed?html,js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.32.0"></script>
+					<h3>Who is using Redis?</h3>
+					<div>
+						<img src="css/GitHub.png" height="100">
+						<img src="css/snapchat.png" height="100">
+					</div>
+					<div>
+						<img src="css/stack-overflow.png" height="100">
+						<img src="css/twitter.png" height="100">
+					</div>
 				</section>
 
 				<section>
-					<h3>Simple Example</h3>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Hello React!&lt;/title&gt;
-    &lt;script src=&quot;https://fb.me/react-0.13.3.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://fb.me/JSXTransformer-0.13.3.js&quot;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
-      &lt;script type=&quot;text/jsx&quot; src=&quot;helloworld.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<pre><code>var HelloMessage = React.createClass({
-  render: function() {
-    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;
-  }
-});
-
-React.render(&lt;HelloMessage name=&quot;John&quot; /&gt;, document.getElementById('example'));</code></pre>
-				</section>
-
-				<section>
-					<a class="jsbin-embed" href="http://jsbin.com/konozuhobo/embed?html,js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.33.1"></script>
-				</section>
-
-				<section>
-					<h3>Flexibility of components</h3>
-<pre><code>var CommentBox = React.createClass({
-  render: function() {
-    return (
-      &lt;div className=&quot;commentBox&quot;&gt;
-        &lt;h1&gt;Comments&lt;/h1&gt;
-        &lt;CommentList  data={this.props.data} /&gt;
-        &lt;CommentForm /&gt;
-      &lt;/div&gt;
-    );
-  }
-});
-
-var CommentList = React.createClass({
-  render: function() {
-    var commentNodes = this.props.data.map(function (comment) {
-      return (
-        &lt;Comment author={comment.author}&gt;
-          {comment.text}
-        &lt;/Comment&gt;
-      );
-    });
-    return (
-      &lt;div className=&quot;commentList&quot;&gt;
-        {commentNodes}
-      &lt;/div&gt;
-    );
-  }
-});
-
-var CommentForm = React.createClass({
-  render: function() {
-    return (
-      &lt;div className=&quot;commentForm&quot;&gt;
-        Hello, world! I am a CommentForm.
-      &lt;/div&gt;
-    );
-  }
-});
-
-var Comment = React.createClass({
-  render: function() {
-    return (
-      &lt;div className=&quot;comment&quot;&gt;
-        &lt;h2 className=&quot;commentAuthor&quot;&gt;
-          {this.props.author}
-        &lt;/h2&gt;
-        {this.props.children}
-      &lt;/div&gt;
-    );
-  }
-});
-
-var data = [
-  {author: &quot;Pete Hunt&quot;, text: &quot;This is one comment&quot;},
-  {author: &quot;Jordan Walke&quot;, text: &quot;This is another comment&quot;}
-];
-
-React.render(
-  &lt;CommentBox data={data}/&gt;,
-  document.getElementById('example')
-);</code></pre>
-					
-				</section>
-
-				<section>
-					<h3>React.js vs. Angular.js</h3>
-					<ul>
-						<li>Virtual DOM or DOM re-render?</li>
-						<li>Angular: Application, Controller, Directives</li>
-						<li>React: Class, Render</li>
-						<li>Angular: $scope</li>
-						<li>React: this.props</li>
-						<li>One way data flow learning curve</li>
-					</ul>
-					<p><q>'Angular is very opinionated, which can be great if it fits your development scenario. React gives you freedom and simplicity, but lacks the declarative power of Angular.'</q></p>
-				</section>
-				
-				<section>
-					<h3>Cool Stuff</h3>
-					<p><a href="http://gragland.github.io/instatype/examples/instagram/">Instagram Auto-Complete</a><a href="https://github.com/gragland/instatype"> : Source</a></p>
-					<p><a href="http://expalmer.github.io/react-progress-form/">Pretty Form</a><a href="https://github.com/expalmer/react-progress-form"> : Source</a></p>
-					<p><a href="http://react.rocks/">Lots more!!</a></p>
+					<a href="try.redis.io">try.redis.io</a>
 				</section>
 			</div>
 

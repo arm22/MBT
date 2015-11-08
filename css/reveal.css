@@ -1173,3 +1173,19 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+
+/*****************
+* OVERRIDES
+*****************/
+.left {
+  text-align: left;
+}
+
+body {
+  font-size: 25%;
+}
+
+.reveal section img {
+  border: none;
+}

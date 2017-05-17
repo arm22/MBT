@@ -1,25 +1,15 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Mobile Ethics</title>
-
-		<link rel="shortcut icon" href="css/iphone.png">
-
-		<meta name="description" content="Mobile phone security">
-		<meta name="author" content="Austin Meyers">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Code syntax highlighting -->
+		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
@@ -30,222 +20,31 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h2>Mobile Communication & Ethics</h2>
-					<div>
-						<img src="css/fingerprint.jpg" width="400px" height="300px">
-					</div>
-					<p>
-						<small>Presentation by Austin Meyers</small>
-					</p>
-				</section>
-				
-				<section>
-					<h2>Introduction</h2>
-					<p>
-						"With the advent of the ubiquitous cell phone, law enforcement has
-						been handed a priceless investigative tool without the outlay of any
-						Federal funds for the hardware." [2]
-					</p>
-
-				</section>
-				
-				<section>
-					<h2>Overview</h2>
-					<ul>
-						<li class="fragment fade-in">Background of Mobile Devices</li>
-						<li class="fragment fade-in">Ethical Issues</li>
-						<li class="fragment fade-in">Conclusions</li>
-						<li class="fragment fade-in">Recommendations</li>
-					</ul>
-				</section>
-
-				<section>
-					<section>
-						<h2>Background</h2>
-						<div>
-							<img src="css/phone.png" width="200px" >
-						</div>
-						<div class="left">
-							<ul>
-								<li class="fragment fade-in">64% of Americans own a smartphone [3]</li>
-								<li class="fragment fade-in">90% of Americans own a cell phone [3]</li>
-								<li class="fragment fade-in">74% of smartphone users allow 'current location' access [3]</li>
-								<li class="fragment fade-in">396 Million Facebook users only use the service on a phone [4]</li>
-							</ul>
-						</div>
-					</section>
-					<section>
-						<img src="css/malware.png">
-					</section>
-					<section>
-						<h2>Background</h2>
-						<div class="left">
-							<h4 class="fragment fade-in">Standard Mobile Device Features:</h4>
-							<ul>
-								<li class="fragment fade-in">Microphone (Developer Access)</li>
-								<li class="fragment fade-in">Multiple Cameras (Developer Access)</li>
-								<li class="fragment fade-in">Location Sensor (Developer Access)</li>
-								<li class="fragment fade-in">Fingerprint Scanner (NEW:Developer Access)</li>
-								<li class="fragment fade-in">Payment Systems (Developer Access)</li>
-								<li class="fragment fade-in">Owner Information</li>
-							</ul>
-						</div>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Ethical Issues</h2>
-						<div class="left">
-							<h4 class="fragment fade-in">Who can access the information on our devices:</h4>
-							<ul>
-								<li class="fragment fade-in">The user</li>
-								<li class="fragment fade-in">The government</li>
-								<li class="fragment fade-in">Network providers</li>
-								<li class="fragment fade-in">Developers</li>
-								<li class="fragment fade-in">Malicious users</li>
-							</ul>
-						</div>
-					</section>
-					<section>
-						<h2>The Government</h2>
-						<div class="left">
-							<ul>
-								<h4 class="fragment fade-in">Patriot Act: Title II</h4>
-								<li class="fragment fade-in">"In general, the Title expands federal agencies' powers in intercepting, sharing, and using private telecommunications, especially electronic communications..." [8]</li><br />
-								<h4 class="fragment fade-in">City of Seattle: StingRay</h4>
-								<li class="fragment fade-in">"Certainly, we (and the general public too) understand that law enforcement has the ability to "ping" a cell phone for its location..." [6]</li>
-							</ul>
-						</div>
-					</section>
-					<section>
-						<h2>Developers</h2>
-						<ul>
-							<img src="css/fb.jpg" width="50px" class="fragment fade-in"><h4 class="fragment fade-in">Marauders Map</h4>
-							<li class="fragment fade-in"><small>“I decided to write this extension, because we are constantly being told how we are losing privacy with the increasing digitization of our lives, however the consequences never seem tangible. With this code you can see for yourself the potentially invasive usage of the information you share, and decide for yourself if this is something you should worry about,” [9]</small></li><br />
-							<img src="css/snap.png" width="50px" class="fragment fade-in"><h4 class="fragment fade-in">Terms of Service</h4>
-							<li class="fragment fade-in"><small>"..there's no way the average person could keep up with all the data-sucking caveats buried in the privacy policies of the sites and services they use." [10]</small></li>
-						</ul>
-					</section>
-				</section>
-				
-				<section>
-					<section data-background="css/data.jpg" data-background-size="1000px">
-					</section>
-					<section>
-						<h2>Conclusions</h2>
-						<ul>
-							<li class="fragment fade-in">What data are you sharing?</li>
-							<li class="fragment fade-in">What access should the government be allowed?</li>
-							<li class="fragment fade-in">What access should the developers be allowed?</li>
-							<li class="fragment fade-in">Who is responsible for your privacy?</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<h2>Recommendations</h2>
-					<ol>
-						<li class="fragment fade-in">Focus on what you can control:</li>
-						<ul>
-							<li class="fragment fade-in">Protect your own privacy above all else</li>
-							<li class="fragment fade-in">Pay attention to Privacy Policies, Terms of Service, etc.</li>
-							<li class="fragment fade-in">Be aware of what data applications have access to</li>
-						</ul>
-						<li class="fragment fade-in">Stand up for privacy:</li>
-						<ul>
-							<li class="fragment fade-in">The Patriot Act</li>
-							<li class="fragment fade-in">The Trans-Pacific Partnership (TPP)</li>
-							<li class="fragment fade-in">Local government: Stingray use</li>
-							<li class="fragment fade-in">Build/engineer with privacy as a concern</li>
-						</ul>
-					</ol>
-				</section>
-
-				<section>
-					<p>“I don’t want to live in a world where everything that I say, everything I do, everyone I talk to, every expression of creativity or love or friendship is recorded.”</p>
-					<p>~Edward Snowden</p>
-					<div>
-						<img src="css/snowden.png" width="400px">
-					</div>
-				</section>
-
-				<section>
-					<section>
-						<h2>References:</h2>
-						<p class="left">
-							<small>
-								[1] Blog.otterbox.com, 2015. [Online]. Available: http://blog.otterbox.com/wp-content/uploads/2013/09/iphone_5s_touch_id_fingerprint_video_hero_4x3.jpg. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[2]M.  Clark, Scholar.valpo.edu, 2015. [Online]. Available: http://scholar.valpo.edu/cgi/viewcontent.cgi?article=1192&context=vulr. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[3] Pew Research Center: Internet, Science & Tech, 'Mobile Technology Fact Sheet', 2013. [Online]. Available: http://www.pewinternet.org/fact-sheets/mobile-technology-fact-sheet/. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[4]E.  Hamburger, 'Facebook's new stats: 1.32 billion users, 30 percent only use it on their phone', The Verge, 2014. [Online]. Available: http://www.theverge.com/2014/7/23/5930743/facebooks-new-stats-1-32-billion-users-per-month-30-percent-only-use-it-on-their-phones. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[5] Nq.com, 2015. [Online]. Available: http://www.nq.com/images/mobilesecurity/slab/perspective_1.png. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[6]C.  Farivar, 'Police talk about use of “stingrays,” but aren’t saying anything', Ars Technica, 2015. [Online]. Available: http://arstechnica.com/tech-policy/2015/02/police-talk-about-use-of-stingrays-but-arent-saying-anything/. [Accessed: 05- Nov- 2015].
-							</small>
-						</p>
-					</section>
-					<section>
-						<h2>References:</h2>
-						<p class="left">
-							<small>
-								[7] Images.kaspersky.com, 2015. [Online]. Available: http://images.kaspersky.com/en/ill/kaspersky_lab_infographics_android_malware_growth.png. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[8] Wikipedia, 'Patriot Act, Title II', 2015. [Online]. Available: https://en.wikipedia.org/wiki/Patriot_Act,_Title_II. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[9]Y.  Grauer, 'Forbes Welcome', Forbes.com, 2015. [Online]. Available: http://www.forbes.com/sites/ygrauer/2015/08/18/facebook-scraping-location-data/. [Accessed: 05- Nov- 2015].
-								<br /><br />
-								[10]A.  Peterson, 'Snapchat’s new Terms of Service freaked people out because no one reads them', Washington Post, 2015. [Online]. Available: https://www.washingtonpost.com/news/the-switch/wp/2015/11/02/snapchats-new-terms-of-service-freaked-people-out-because-no-one-reads-them/. [Accessed: 05- Nov- 2015].
-					</section>
-				</section>
+				<section>Slide 1</section>
+				<section>Slide 2</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'convex', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-
 		</script>
-
 	</body>
+</html>
 </html>

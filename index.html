@@ -30,6 +30,7 @@
           <h1>MBT</h1>
           <h4 class="fragment fade-left">MACH | BETTER | THINK</h4>
           <h4 class="fragment fade-right">Developer Walkthrough</h4>
+          <img class="fragment fade-up" src="https://media.giphy.com/media/YfO8X3PfSmuyY/giphy.gif?response_id=591d4bc4c081e7b83a53e4d4" alt="celery-man">
         </section>
         <section>
           <h1>Let's take a look</h1>
@@ -37,22 +38,29 @@
           <a target="_blank" href="https://uat-verticals.nbcnews.com/better"> BETTER |</a>
           <a target="_blank" href="https://uat-verticals.nbcnews.com/think"> THINK</a>
           <p>Username: newsdigital</p>
-          <p>Password: check wiki</p>
+          <p>Password: <a href="https://nbcnewsdigital.atlassian.net/wiki/display/MBT/Testing+Guide">check wiki</a></p>
         </section>
         <section>
           <h2>Site Architecture</h2>
-          <p><a target="_blank" href="https://github.com/nbcnews/verticals-pal">Verticals-PAL</a></p>
-          <p><a target="_blank" href="https://github.com/nbcnews/ramen">Ramen</a></p>
+          <p>Content API</p>
+          <p>Verticals-PAL</p>
+          <p>Ramen</p>
+        </section>
+        <section>
+          <h1>Content API</h1>
+          <p>Where NBC content lives?</p>
+          <img class="fragment fade-up" src="https://media.giphy.com/media/xT0BKmtQGLbumr5RCM/giphy.gif?response_id=591d51b3b0485c95a473219a" alt="confused">
         </section>
         <section>
           <section>
             <h1>Verticals-PAL</h1>
-            <p> <a target="_blank" href="https://github.com/nbcnews/verticals-pal">https://github.com/nbcnews/verticals-pal</a></p>
+            <p><a target="_blank" href="https://github.com/nbcnews/verticals-pal">https://github.com/nbcnews/verticals-pal</a></p>
             <ul>
-              <li class="fragment fade-up">Layer between Content API & Ramen</li>
-              <li class="fragment fade-up">Uses GraphQL (<span class="fragment highlight-blue">Facebook</span>)</li>
-              <li class="fragment fade-up">JavaScript -> ES6</li>
-              <li class="fragment fade-up">Maintained by <a href="https://github.com/nbc-joby">Joby Joseph</a></li>
+              <li>Layer between Content API & Ramen</li>
+              <li>Acts like Today-PAL and News-PAL</li>
+              <li>Uses GraphQL (<span class="fragment highlight-blue">Facebook</span>)</li>
+              <li>JavaScript => ES6</li>
+              <li>Maintained by <a href="https://github.com/nbc-joby">Joby Joseph</a></li>
             </ul>
           </section>
           <section>
@@ -120,6 +128,51 @@
                 }
               }
             </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Ramen</h1>
+            <p> <a target="_blank" href="https://github.com/nbcnews/ramen">https://github.com/nbcnews/ramen</a></p>
+            <ul>
+              <li>Rendering application for 3 new Verticals</li>
+              <li>Component based front-end framework (like React.js(<span class="fragment highlight-blue">Facebook</span>))</li>
+              <li>JavaScript -> ES6</li>
+              <li>Written by <a href="https://github.com/stephenbaldwin">Stephen Baldwin</a> for NBC</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Technical Details</h3>
+
+          </section>
+          <section>
+            <h3>Example Request Using GraphiQL</h3>
+            <p><a target="_blank" href="https://uat-verticalspal.nbcnews.com/?query=query%20getVideo(%24slug%3A%20ID!)%20%7B%0A%20%20videos(id%3A%20%24slug)%20%7B%0A%20%20%20%20id%0A%20%20%20%20mpxId%0A%20%20%20%20firstAired%0A%20%20%20%20guid%0A%09%09videoAssets%20%7B%0A%20%20%20%20%20%20assetType%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D">GraphQL GUI</a></p>
+            <pre><code data-trim>
+              //Request
+              {
+                "slug": "mmvo930030659753"
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h3>Dev Process</h3>
+        </section>
+        <section>
+          <section>
+            <h3>Helpful Links</h3>
+            <img class="fragment fade-up" src="https://media.giphy.com/media/z3fzetnSnRjLa/giphy.gif?response_id=591d4fe52012181b8bdd6959" alt="helpful-links">
+          </section>
+          <section>
+            <h3>Github</h3>
+            <p><a target="_blank" href="https://github.com/nbcnews/ramen">Ramen</a></p>
+          </section>
+          <section>
+            <h3>Atlassian</h3>
+          </section>
+          <section>
+            <h3>Slack</h3>
           </section>
         </section>
         <section>

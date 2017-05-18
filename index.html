@@ -28,19 +28,99 @@
       <div class="slides">
         <section>
           <h1>MBT</h1>
-          <h3>MACH BETTER THINK</h3>
-          <h4>Developer Walkthrough</h4>
+          <h4 class="fragment fade-left">MACH | BETTER | THINK</h4>
+          <h4 class="fragment fade-right">Developer Walkthrough</h4>
         </section>
         <section>
-          <h2>Architecture</h2>
-          <ul>
-            <li>
-              <a href="https://github.com/nbcnews/verticals-pal">Verticals-PAL</a>
-            </li>
-            <li>
-              <a href="https://github.com/nbcnews/ramen">Ramen</a>
-            </li>
-          </ul>
+          <h1>Let's take a look</h1>
+          <a target="_blank" href="https://uat-verticals.nbcnews.com/mach">MACH |</a>
+          <a target="_blank" href="https://uat-verticals.nbcnews.com/better"> BETTER |</a>
+          <a target="_blank" href="https://uat-verticals.nbcnews.com/think"> THINK</a>
+          <p>Username: newsdigital</p>
+          <p>Password: check wiki</p>
+        </section>
+        <section>
+          <h2>Site Architecture</h2>
+          <p><a target="_blank" href="https://github.com/nbcnews/verticals-pal">Verticals-PAL</a></p>
+          <p><a target="_blank" href="https://github.com/nbcnews/ramen">Ramen</a></p>
+        </section>
+        <section>
+          <section>
+            <h1>Verticals-PAL</h1>
+            <p> <a target="_blank" href="https://github.com/nbcnews/verticals-pal">https://github.com/nbcnews/verticals-pal</a></p>
+            <ul>
+              <li class="fragment fade-up">Layer between Content API & Ramen</li>
+              <li class="fragment fade-up">Uses GraphQL (<span class="fragment highlight-blue">Facebook</span>)</li>
+              <li class="fragment fade-up">JavaScript -> ES6</li>
+              <li class="fragment fade-up">Maintained by <a href="https://github.com/nbc-joby">Joby Joseph</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Technical Details</h3>
+            <pre><code class="markdown" data-trim>
+              schema 👉 Holds the top level queryable schema objects (Video)
+
+              store 👉 Provides api connection functions (findById)
+
+              types 👉 Provides the graphql schema for each type
+
+              transforms 👉 Responsible for asking the store for data and transforming the data
+            </code></pre>
+          </section>
+          <section>
+            <h3>Example Request Using GraphiQL</h3>
+            <p><a target="_blank" href="https://uat-verticalspal.nbcnews.com/?query=query%20getVideo(%24slug%3A%20ID!)%20%7B%0A%20%20videos(id%3A%20%24slug)%20%7B%0A%20%20%20%20id%0A%20%20%20%20mpxId%0A%20%20%20%20firstAired%0A%20%20%20%20guid%0A%09%09videoAssets%20%7B%0A%20%20%20%20%20%20assetType%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D">GraphQL GUI</a></p>
+            <pre><code data-trim>
+              //Request
+              query getVideo($slug: ID!) {
+                videos(id: $slug) {
+                  id
+                  mpxId
+                  firstAired
+                  guid
+                  videoAssets {
+                    assetType
+                  }
+                }
+              }
+              {
+                "slug": "mmvo930030659753"
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Example Response Using GraphiQL</h3>
+            <p><a target="_blank" href="https://uat-verticalspal.nbcnews.com/?query=query%20getVideo(%24slug%3A%20ID!)%20%7B%0A%20%20videos(id%3A%20%24slug)%20%7B%0A%20%20%20%20id%0A%20%20%20%20mpxId%0A%20%20%20%20firstAired%0A%20%20%20%20guid%0A%09%09videoAssets%20%7B%0A%20%20%20%20%20%20assetType%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D">GraphQL GUI</a></p>
+            <pre><code data-trim>
+              //Response
+              {
+                "data": {
+                  "videos": [
+                    {
+                      "id": "mmvo930030659753",
+                      "mpxId": "930030659753",
+                      "firstAired": "2017-04-26T15:30:38.000+0000",
+                      "guid": "a_mach_pioneering_artificalwomb_170426",
+                      "videoAssets": [
+                        {
+                          "assetType": "OnceURL"
+                        },
+                        {
+                          "assetType": "Limelight MP4"
+                        },
+                        {
+                          "assetType": "Limelight MP4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "extensions": {
+                  "runTime": 265
+                }
+              }
+            </code></pre>
+          </section>
         </section>
         <section>
           <pre><code data-trim>
@@ -62,6 +142,7 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+    fragments: true,
     dependencies: [
     { src: 'plugin/markdown/marked.js' },
     { src: 'plugin/markdown/markdown.js' },

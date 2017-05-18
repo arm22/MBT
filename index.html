@@ -143,23 +143,164 @@
           </section>
           <section>
             <h3>Technical Details</h3>
-
-          </section>
-          <section>
-            <h3>Example Request Using GraphiQL</h3>
-            <p><a target="_blank" href="https://uat-verticalspal.nbcnews.com/?query=query%20getVideo(%24slug%3A%20ID!)%20%7B%0A%20%20videos(id%3A%20%24slug)%20%7B%0A%20%20%20%20id%0A%20%20%20%20mpxId%0A%20%20%20%20firstAired%0A%20%20%20%20guid%0A%09%09videoAssets%20%7B%0A%20%20%20%20%20%20assetType%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D">GraphQL GUI</a></p>
+            <p>Compenent Based</p>
             <pre><code data-trim>
-              //Request
-              {
-                "slug": "mmvo930030659753"
+              // ExamplePage.js
+              import ExampleComponent from './ExampleComponent';
+
+              const exampleComponent = new ExampleComponent({ title: 'example title', items: ['item 1', 'item 2'] });
+
+              // ExampleComponent.js
+              import Framework from 'framework';
+              import ExampleSubComponent from './ExampleSubComponent';
+
+              class ExampleComponent extends Framework.Component {
+                // The return object of the components method will be namespaced as "Component" in the template
+                components() {
+                  const { items } = this.data;
+
+                  return {
+                    ExampleSubComponent: new ExampleSubComponent({ items }),
+                  };
+                }
+              }
+
+              // ExampleComponent.hbs
+              <div>
+                <h1>{{title}}</h1>
+                {{{Component.ExampleSubComponent}}}
+              </div>
+
+              // ExampleComponent.scss
+              h1 {
+                background-color: red;
               }
             </code></pre>
+          </section>
+          <section>
+            <h3>Example Page Data</h3>
+            <p><a target="_blank" href="https://uat-verticals.nbcnews.com/mach/api/video/mach/mmvo915383363791">API GUI</a></p>
+            <pre><code data-trim>
+              {
+                "data": {
+                  "curation": {},
+                  "subVertical": [],
+                  "playlists": [],
+                  "videos": [
+                    {
+                      "id": "mmvo915383363791",
+                      "mpxId": "915383363791",
+                      "guid": "a_mach_pioneering_fishDNA_170406",
+                      "headline": {},
+                      "description": {},
+                      "dateCreated": "2017-04-06T14:43:01.000+0000",
+                      "datePublished": "2017-04-06T14:43:01.000+0000",
+                      "dateModified": "2017-04-06T14:51:24.000+0000",
+                      "firstAired": "2017-04-06T14:51:24.000+0000",
+                      "lastAired": "2017-04-06T14:51:24.000+0000",
+                      "broadcastDate": "2017-04-06T14:43:01.000+0000",
+                      "availableDate": "2017-04-06T14:51:24.000+0000",
+                      "availabilityState": "available",
+                      "source": {},
+                      "urls": {},
+                      "mainImage": {},
+                      "coverImage": null,
+                      "duration": "PT1M12S",
+                      "playbackIsDisabled": false,
+                      "associatedPlaylist": {},
+                      "defaultAssociation": "NBC News/Topic/Innovation",
+                      "videoType": "Original",
+                      "nativeAd": false,
+                      "requiresCaptioning": false,
+                      "hasCaptions": false,
+                      "captionLinks": [],
+                      "hasTranscript": false,
+                      "transcript": [],
+                      "videoAssets": [],
+                      "customFields": {},
+                      "primarySection": {},
+                      "primaryTopic": null,
+                      "topics": null,
+                      "sections": [],
+                      "verticals": null
+                    }
+                  ]
+                },
+                "extensions": {
+                  "runTime": 2001
+                }
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Video Code</h3>
+            <p>
+              VideoComponent
+              <ul>
+                <li>src/views/components/VideoPlayer.js</li>
+                <li>src/templates/components/VideoPlayer.hbs</li>
+                <li>src/templates/components/VideoPlayer.scss</li>
+              </ul>
+            </p>
+          </section>
+          <section>
+            <h3>Video Code</h3>
+            <p>
+              InlineVideo
+              <ul>
+                <li>src/views/components/InlineVideo.js</li>
+                <li>src/templates/components/InlineVideo.hbs</li>
+                <li>src/templates/components/InlineVideo.scss</li>
+              </ul>
+            </p>
+          </section>
+          <section>
+            <h3>Video Code</h3>
+            <p>
+              VideoContainer
+              <ul>
+                <li>src/views/components/VideoContainer.js</li>
+                <li>src/templates/components/VideoContainer.hbs</li>
+                <li>src/templates/components/VideoContainer.scss</li>
+              </ul>
+            </p>
+          </section>
+          <section>
+            <h3>Video Code</h3>
+            <p>
+              Non-component
+              <ul>
+                <li>src/assets/javascripts/video.js</li>
+                <li>src/assets/javascripts/components/ndpInit.js</li>
+              </ul>
+            </p>
           </section>
         </section>
         <section>
           <h3>Dev Process</h3>
+          <ol>
+            <li>Checkout master branch</li>
+            <li>Write some code (tied to JIRA ticket)</li>
+            <li>
+              Checkout new branch, named w/ ticket, description
+              <pre><code data-trim>
+                git checkout -b MBT-123-make_video_great_again
+              </code></pre>
+            </li>
+            <li>Push commits to remote often</li>
+            <li>When code meets acceptance criteria, create PR</li>
+            <li>Code Review</li>
+            <li>Code merged to master (by collaborator)</li>
+            <li>Move ticket to "In QA"</li>
+            <li>Rinse & Repeat</li>
+          </ol>
         </section>
         <section>
+          <section>
+            <h3>Tips</h3>
+            <p>Build process isn't reliable, best to stop/start on every file change</p>
+            <p>Ping #mbtweb-dev for PR reviews (instead of waiting)</p>
+          </section>
           <section>
             <h3>Helpful Links</h3>
             <img class="fragment fade-up" src="https://media.giphy.com/media/z3fzetnSnRjLa/giphy.gif?response_id=591d4fe52012181b8bdd6959" alt="helpful-links">
